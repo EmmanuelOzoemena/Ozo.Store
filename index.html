@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozo.Store | DOM Project</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kenia&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- left section (logo) -->
+      <section class="left-sec">
+        <h3>Ozo.<span>Store</span></h3>
+      </section>
+
+      <!-- middle section (search input) -->
+      <section class="middle-sec">
+        <input type="text" placeholder="Search" />
+        <img src="./images/search-icon.png" title="Search" />
+      </section>
+
+      <!-- right section (cart-logo) -->
+      <section class="right-sec">
+        <i
+          class="fa-solid fa-cart-shopping fa-bounce"
+          style="color: #ff7605"
+        ></i>
+        <div
+          id="div"
+          class="cart-text"
+          onclick="
+            alert(`Cart Quantity: ${cartQuantity}\nItem Price: $${itemPrice}.00`);
+          "
+        >
+          Check Cart
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <div class="small-container">
+        <div class="row">
+          <!-- item 1 -->
+          <div class="col-4">
+            <img src="./images/product-2.jpg" alt="Product picture 1" />
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p id="price1">
+              $65.00
+              <button id="btnh1" onclick="Toggle1()" class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </p>
+            <div>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <button
+                class="add"
+                onclick="
+                  updateCartQuantity(1)
+                  updateItemPrice(65)
+                  "
+              >
+                Add
+              </button>
+              <button
+                class="remove"
+                onclick="
+                  updateCartQuantity(-1)
+                  updateItemPrice(-65)
+                "
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="col-4">
+            <img src="./images/product-3.jpg" alt="Product picture 2" />
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>
+              $50.00
+              <button id="btnh2" onclick="Toggle2()" class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </p>
+            <div>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <button
+                class="add"
+                onclick="
+                  updateCartQuantity(1)
+                  updateItemPrice(50)
+                  "
+              >
+                Add
+              </button>
+              <button
+                class="remove"
+                onclick="
+                  updateCartQuantity(-1)
+                  updateItemPrice(-50)
+              "
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="col-4">
+            <img src="./images/product-4.jpg" alt="Product picture 3" />
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p>
+              $60.00
+              <button id="btnh3" onclick="Toggle3()" class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </p>
+            <div>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <button
+                class="add"
+                onclick="
+                  updateCartQuantity(1)
+                  updateItemPrice(60)
+                  "
+              >
+                Add
+              </button>
+              <button
+                class="remove"
+                onclick="
+                  updateCartQuantity(-1)
+                  updateItemPrice(-60)
+              "
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <!-- item 4 -->
+          <div class="col-4">
+            <img src="./images/product-5.jpg" alt="Product picture 4" />
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>
+              $70.00
+              <button id="btnh4" onclick="Toggle4()" class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </p>
+            <div>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <button
+                class="add"
+                onclick="
+                  updateCartQuantity(1)
+                  updateItemPrice(70)
+                  "
+              >
+                Add
+              </button>
+              <button
+                class="remove"
+                onclick="
+                  updateCartQuantity(-1)
+                  updateItemPrice(-70)
+              "
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <!-- item 5 -->
+          <div class="col-4">
+            <img src="./images/product-6.jpg" alt="Product picture 4" />
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>
+              $57.00
+              <button id="btnh5" onclick="Toggle5()" class="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </p>
+            <div>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <button
+                class="add"
+                onclick="
+                  updateCartQuantity(1)
+                  updateItemPrice(57)
+                  "
+              >
+                Add
+              </button>
+              <button
+                class="remove"
+                onclick="
+                  updateCartQuantity(-1)
+                  updateItemPrice(-57)
+              "
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <section class="left-sec foot">
+        <h3>Ozo.<span>Store</span></h3>
+      </section>
+    </footer>
+
+    <!-- JavaScript link -->
+    <script src="./script.js"></script>
+  </body>
+</html>
