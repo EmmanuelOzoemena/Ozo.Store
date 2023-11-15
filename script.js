@@ -3,13 +3,13 @@ let cartQuantity = 0;
 
 function updateCartQuantity(change) {
 
-  if (cartQuantity + change > 5) {
-    return alert("The cart is full");
-  } else if (cartQuantity + change < 0) {
+  if (cartQuantity + change < 0) {
     return alert("Not enough items in the cart");
   }
 
   cartQuantity += change
+
+  document.querySelector('#quantity').innerText = `Cart Quantity:  ${cartQuantity}`
 }
 
 // Show cart quantity total price adjusted according to quantity and deletions
@@ -21,64 +21,60 @@ function updateItemPrice(price) {
     return alert("Purchase an item")
   }
   itemPrice += price
+  document.querySelector('#amount').innerText = `Item Amount: $${itemPrice}`
+
 }
 
 
 // first heart button
 let btnHeart = document.getElementById('btnh1')
+let color = '#ff7605'
+let isLiked = false
 
 function Toggle1() {
-  if (btnHeart.style.color == 'red') {
-    btnHeart.style.color = 'gray'
-  } else {
-    btnHeart.style.color = '#ff7605'
-  }
+  isLiked = !isLiked
+  btnHeart.style.color = isLiked ? '#ff7605':'grey'
 }
-
 
 // second heart button
 let btnHeart2 = document.getElementById('btnh2')
+let color2 = '#ff7605'
+let isLiked2 = false
 
 function Toggle2() {
-  if (btnHeart2.style.color == 'red') {
-    btnHeart2.style.color = 'gray'
-  } else {
-    btnHeart2.style.color = '#ff7605'
-  }
+  isLiked2 = !isLiked2
+  btnHeart2.style.color = isLiked2 ? '#ff7605':'grey'
 }
 
 
 // third heart button
 let btnHeart3 = document.getElementById('btnh3')
+let color3 = '#ff7605'
+let isLiked3 = false
 
 function Toggle3() {
-  if (btnHeart3.style.color == 'red') {
-    btnHeart3.style.color = 'gray'
-  } else {
-    btnHeart3.style.color = '#ff7605'
-  }
+  isLiked3 = !isLiked3
+  btnHeart3.style.color = isLiked3 ? '#ff7605':'grey'
 }
 
 
 // fourth heart button
 let btnHeart4 = document.getElementById('btnh4')
+let color4 = '#ff7605'
+let isLiked4 = false
 
 function Toggle4() {
-  if (btnHeart4.style.color == 'red') {
-    btnHeart4.style.color = 'gray'
-  } else {
-    btnHeart4.style.color = '#ff7605'
-  }
+  isLiked4 = !isLiked4
+  btnHeart4.style.color = isLiked4 ? '#ff7605':'grey'
 }
 
 
 // fifth heart button
 let btnHeart5 = document.getElementById('btnh5')
+let color5 = '#ff7605'
+let isLiked5 = false
 
 function Toggle5() {
-  if (btnHeart5.style.color == 'red') {
-    btnHeart5.style.color = 'gray'
-  } else {
-    btnHeart5.style.color = '#ff7605'
-  }
+isLiked5 = !isLiked5
+btnHeart5.style.color = isLiked5 ? '#ff7605':'grey'
 }
